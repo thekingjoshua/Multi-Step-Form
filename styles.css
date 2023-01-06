@@ -1,0 +1,423 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+:root {
+	/* Primary */
+	--marine-blue: hsl(213, 96%, 18%);
+	--purplish-blue: hsl(243, 100%, 62%);
+	--pastel-blue: hsl(228, 100%, 84%);
+	--light-blue: hsl(206, 94%, 87%);
+	-strawberry-red: hsl(354, 84%, 57%);
+	/* Neutral */
+	--cool-gray: hsl(231, 11%, 63%);
+	--light-gray: hsl(229, 24%, 87%);
+	--magnolia: hsl(217, 100%, 97%);
+	--alabaster: hsl(231, 100%, 99%);
+	--white: hsl(0, 0%, 100%);
+}
+html {
+	font-size: 62.5%;
+	font-family: Arial;
+}
+body {
+	background-color: var(--magnolia);
+}
+.top {
+	background-image: url(bg-sidebar-mobile.svg);
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 30vh;
+}
+.nav__btns {
+	top: 6%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.nav__btns button {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: 0.1rem solid var(--white);
+	background-color: transparent;
+	color: var(--white);
+	font-weight: 600;
+	margin: 0 1rem;
+}
+.nav__btns button.active {
+	background-color: var(--light-blue);
+	color: black;
+}
+form {
+	background-color: var(--alabaster);
+	height: 70vh;
+	width: 90%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 48%;
+	left: 50%;
+	border-radius: 1rem;
+	box-shadow: 0px 4px 19px 0px var(--light-gray);
+}
+form.active__form {
+	z-index: 2;
+}
+.hidden {
+	opacity: 0;
+}
+form h3 {
+	font-size: 2rem;
+	margin: 2rem 0 0 3rem;
+	color: var(--marine-blue);
+}
+form p {
+	margin: 1rem 0 0 3rem;
+	font-size: 1.8rem;
+	color: var(--cool-gray);
+	font-weight: lighter;
+}
+form label {
+	display: block;
+	margin: 1.8rem 0 0 3rem;
+	font-size: 1.5rem;
+}
+form input {
+	width: 70%;
+	margin: 0.8rem 0 0 3rem;
+	font-size: 1.5rem;
+	padding: 1.5rem;
+	border: 1px solid var(--cool-gray);
+	border-radius: 0.4rem;
+}
+.next__step__container {
+	position: absolute;
+	bottom: 0%;
+	background-color: var(--alabaster);
+	width: 100%;
+	height: 12vh;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.next__step__container .next {
+	background-color: var(--marine-blue);
+	float: right;
+	padding: 1.5rem;
+	color: var(--white);
+	margin: 0 0.7rem 0 0;
+	border-radius: 0.5rem;
+	border: none;
+}
+.next__step__container .back {
+	background-color: transparent;
+	float: right;
+	padding: 1.5rem;
+	color: var(--light-gray);
+	margin: 0 0.7rem 0 0;
+	border-radius: 0.5rem;
+	border: none;
+	position: absolute;
+	left: 0;
+	font-weight: 900;
+}
+.arcade,
+.advanced,
+.pro {
+	margin: 0.8rem 0 0 3rem;
+	padding: 1.2rem;
+	width: 70%;
+	border-radius: 0.8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.5rem;
+	font-size: 1.8rem;
+	border: 1px solid var(--light-gray);
+}
+.arcade,
+.advanced,
+.pro .text h4 {
+	color: var(--marine-blue);
+}
+.arcade .text h5 {
+	margin: 0.5rem 0 0 0;
+	color: var(--light-gray);
+	font-size: 1.5rem;
+}
+.advanced .text h5 {
+	margin: 0.5rem 0 0 0;
+	color: var(--light-gray);
+	font-size: 1.5rem;
+}
+.pro .text h5 {
+	margin: 0.5rem 0 0 0;
+	color: var(--light-gray);
+	font-size: 1.5rem;
+}
+
+.duration {
+	background-color: var(--magnolia);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 84%;
+	height: 10vh;
+	position: absolute;
+	top: 88%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.duration h4:first-child {
+	font-size: 1.4rem;
+	color: initial;
+}
+.duration h4 {
+	font-size: 1.4rem;
+	color: var(--light-gray);
+}
+.togg__btn__container {
+	background-color: var(--marine-blue);
+	height: 4vh;
+	width: 24%;
+	display: flex;
+	margin: 0 2rem;
+	border-radius: 2rem;
+}
+.togg__btn__container button {
+	width: 2rem;
+	height: 2rem;
+	padding: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--white);
+	border: none;
+	color: var(--white);
+	position: absolute;
+	top: 21px;
+	margin: 0 10px 0 3px;
+}
+.togg__btn__container button.move:hover {
+	transform: translateX(33px);
+	transition: transform 0.1s linear;
+}
+form.step-3 input {
+	width: 15%;
+	margin: 0 1rem;
+}
+form.step-3 .content .container {
+	display: flex;
+	align-items: center;
+	margin: 2.5rem 0 0 3rem;
+	padding: 1.2rem;
+	width: 75%;
+	border-radius: 0.8rem;
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	border: 1px solid var(--light-gray);
+}
+form.step-3 .content .container p {
+	color: var(--marine-blue);
+	font-size: 1.3rem;
+	font-weight: 500;
+}
+form.step-4 .container {
+	background-color: var(--light-gray);
+	width: 80%;
+	height: 22vh;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	padding: 1rem;
+}
+form.step-4 .container .first div h4 {
+	color: var(--marine-blue);
+	font-size: 1.3rem;
+	font-weight: 750;
+}
+form.step-4 .container .first {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1rem;
+}
+form.step-4 .container .first div:nth-child(1) h5 {
+	font-size: 1.2rem;
+	text-decoration: underline;
+	margin-top: 0.5rem;
+}
+form.step-4 .container .first div:nth-child(2) {
+	font-size: 1.4rem;
+	color: var(--marine-blue);
+	font-weight: 700;
+}
+form.step-4 .container .second {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+}
+form.step-4 .container .second div h6 {
+	color: var(--cool-gray);
+	font-size: 1.2rem;
+}
+form.step-4 .container .second div:nth-child(2) {
+	font-size: 1.4rem;
+	color: var(--marine-blue);
+	font-weight: 500;
+}
+form.step-4 .container .third {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+}
+form.step-4 .container .third div h6 {
+	color: var(--cool-gray);
+	font-size: 1.2rem;
+}
+form.step-4 .container .third div:nth-child(2) {
+	font-size: 1.4rem;
+	color: var(--marine-blue);
+	font-weight: 500;
+}
+form.step-4 .container hr {
+	margin: 2rem 0;
+	border: 0.3px solid var(--white);
+}
+form.step-4 .last {
+	width: 80%;
+	margin: 1rem auto;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+form.step-4 .last div h6 {
+	color: var(--cool-gray);
+	font-size: 1.3rem;
+	padding: 0.5rem 1rem;
+}
+form.step-4 .last div:nth-child(2) {
+	font-size: 1.6rem;
+	color: var(--purplish-blue);
+}
+form.step-5 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+form.step-5 img {
+	width: 20%;
+	margin: 6rem 0 0 0;
+}
+form.step-5 p {
+	width: 95%;
+	margin: 0;
+	text-align: center;
+	font-size: 1.5rem;
+	line-height: 2.5rem;
+	font-weight: 500;
+}
+form.step-5 h2 {
+	font-size: 2.5rem;
+	margin: 3rem 0;
+	color: var(--marine-blue);
+}
+.border {
+	border: 1px solid var(--purplish-blue);
+}
+.attribution {
+	position: absolute;
+	z-index: 3;
+	bottom: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+}
+.attribution a {
+	color: var(--marine-blue);
+	text-decoration: none;
+}
+@media only screen and (min-width: 360px) {
+	form {
+		top: 49%;
+		height: 60vh;
+	}
+	.arcade,
+	.advanced,
+	.pro {
+		padding: 1.5rem;
+	}
+	.togg__btn__container button {
+		top: 25px;
+	}
+	.togg__btn__container button.move:hover {
+		transform: translateX(40px);
+	}
+}
+@media only screen and (min-width: 375px) {
+	form {
+		top: 49%;
+		height: 70vh;
+	}
+	.arcade,
+	.advanced,
+	.pro {
+		padding: 1.3rem;
+	}
+	.togg__btn__container button {
+		top: 21px;
+	}
+	.togg__btn__container button.move:hover {
+		transform: translateX(43px);
+	}
+}
+@media only screen and (min-width: 425px) {
+	.top {
+		background-image: url(bg-sidebar-mobile.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 30vh;
+		object-fit: cover;
+	}
+	.nav__btns {
+		top: 6%;
+		left: 50%;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+@media only screen and (min-width: 1024px) {
+	body {
+		cursor: pointer;
+	}
+	form {
+		top: 49%;
+		height: 70vh;
+		width: 30%;
+	}
+	.arcade,
+	.advanced,
+	.pro {
+		padding: 1.3rem;
+	}
+	.togg__btn__container button {
+		top: 24px;
+		cursor: pointer;
+	}
+	.togg__btn__container button.move:focus {
+		transform: translateX(55px);
+	}
+	.next__step__container button {
+		cursor: pointer;
+	}
+}
